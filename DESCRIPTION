@@ -1,15 +1,16 @@
 Package: radous
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Query Random User Data From the Random User Generator API
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Mohamed El Fodil Ihaddaden
+Maintainer: Mohamed El Fodil Ihaddaden <ihaddaden.fodeil@gmail.com>
+Description: The packages allows to generate random user data from the Random User Generator API.
+    For more information, see <https://randomuser.me/>.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports: 
     glue,
     httr,
     readr
+RoxygenNote: 7.1.1
