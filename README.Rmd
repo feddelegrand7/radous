@@ -24,6 +24,8 @@ knitr::opts_chunk$set(
 - Testing a function; 
 - Testing an application (Shiny, Dash or others)
 
+You can generate up to 5000 observations in one query.
+
 
 ## Installation
 
@@ -85,6 +87,89 @@ htmltools::img(src = random_image, height = "150px", width = "150px")
 
 ```
 
+
+## Teaching with `radous` 
+
+The generated data has 34 variables (columns) with different types of information that you can play with. The data frame is particularly suited for teaching the tidyverse, here some example: 
+
+#### Select 
+
+
+> Here we select columns that are related to users' location:
+
+
+```{r message=FALSE, warning=FALSE}
+
+library(tidyverse)
+
+
+df <- get_data(n = 500, seed = 123)
+
+
+df %>% select(contains("location"))
+
+
+
+```
+
+
+
+
+
+#### Filter 
+
+
+> Getting the users that are US citizens:
+
+
+```{r message=FALSE, warning=FALSE}
+
+
+
+df %>% filter(nat == "US")
+
+```
+
+
+### relocate 
+
+
+> Relocating the last column `nat` to the beginning: 
+
+```{r}
+
+df %>% relocate(nat, before = gender)
+
+```
+
+### group_by & summarise
+
+
+> Calculating median age by gender:
+
+
+```{r}
+
+df %>% group_by(gender) %>% 
+  summarise(median_age = median(dob_age))
+
+
+
+```
+### count, arrange & desc
+
+
+> Getting the number of users per country of residence:
+
+```{r}
+
+df %>% 
+  count(location_country) %>% 
+  arrange(desc(n))
+
+
+
+```
 
 
 ## Code of Conduct
