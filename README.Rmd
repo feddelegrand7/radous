@@ -1,0 +1,86 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# radous
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+`radous` allows you to generate random user data from the [Random User Generator API](https://randomuser.me/)
+
+## Installation
+
+You can install the development version of `radous` from [GitHub](https://github.com/) with:
+
+```{r, eval=FALSE}
+
+#install.packages("remotes") ---- If not installed
+
+remotes::install_github("feddelegrand7/radous")
+
+
+```
+
+
+## Usage
+
+`radous` is extremely simple to use and has one function: `get_data()`.
+
+Suppose we want to generate 10 random user data: 
+
+
+```{r}
+
+library(radous)
+
+get_data(n = 10)
+
+```
+
+If you want to generate always the same set of users, you can use the `seed` argument: 
+
+
+```{r}
+
+get_data(n = 5, seed = "1990")
+
+```
+
+
+Let's run the above code again to check if we get the same info: 
+
+```{r}
+
+get_data(n = 5, seed = "1990")
+
+```
+
+If you need some user images, it's easy to get: 
+
+```{r, out.width="50%", out.height="50%"}
+
+library(dplyr)
+
+random_image <- get_data(n = 5) %>% select(picture.medium) %>% pull()
+
+knitr::include_graphics(random_image)
+
+```
+
+
+
+## Code of Conduct
+
+Please note that the radous project is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.

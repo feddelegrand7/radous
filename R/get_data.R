@@ -1,5 +1,3 @@
-
-
 #' Query random user data from the Random User Generator API
 #'
 #' @param n Number of users to fetch, up to 5,000 generated users in one request. Defaults to 1
