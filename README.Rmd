@@ -69,13 +69,14 @@ get_data(n = 5, seed = "1990")
 
 If you need some user images, it's easy to get: 
 
-```{r, out.width="50%", out.height="50%"}
+```{r, message=FALSE, warning=FALSE}
 
 library(dplyr)
 
-random_image <- get_data(n = 5) %>% select(picture.medium) %>% pull()
+random_image <- get_data(n = 1) %>% select(picture.large) %>% pull()
 
-knitr::include_graphics(random_image)
+htmltools::img(src = random_image, height = "150px", width = "150px")
+
 
 ```
 

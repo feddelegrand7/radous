@@ -36,18 +36,18 @@ get_data(n = 10)
 #> # A tibble: 10 x 34
 #>    gender name.title name.first name.last location.street~ location.street~
 #>    <chr>  <chr>      <chr>      <chr>                <dbl> <chr>           
-#>  1 female Mrs        Alice      Claire                2051 Alfred St       
-#>  2 male   Mr         Filip      Brøndbo               2394 Damstredet      
-#>  3 female Mrs        Olivia     Wood                    40 Grey Street     
-#>  4 female Miss       Alix       Faure                 5122 Avenue du Châte~
-#>  5 male   Mr         Durk       Ijzermans              847 Jan van Goijenl~
-#>  6 female Madame     Nancy      Lefevre               7266 Rue Laure-Diebo~
-#>  7 female Ms         Letitia    Nguyen                 108 Homestead Rd    
-#>  8 female Ms         Eda        Van den ~             5061 Judith Leysters~
-#>  9 female Mrs        Tracey     Murphy                8015 E North St      
-#> 10 male   Mr         Danny      Griffin                746 The Grove       
+#>  1 female Miss       Afsar      Akgül                 3553 Sehitler Cd     
+#>  2 male   Mr         Soan       Dumas                 5985 Grande Rue      
+#>  3 male   Mr         Iker       Rubio                 5160 Paseo de Zorril~
+#>  4 female Miss       Ida        Christia~              633 Marsvej         
+#>  5 male   Mr         Kadir      Ekici                 7257 Abanoz Sk       
+#>  6 male   Mr         Edward     Anderson              6438 Te Atatu Road   
+#>  7 male   Mr         Lino       Vidal                  832 Rue Duquesne    
+#>  8 male   Monsieur   Muhamed    Moreau                4439 Rue Abel        
+#>  9 male   Mr         Tim        Caron                 9924 Rue Pasteur     
+#> 10 female Ms         Nina       Burke                 4505 Rolling Green Rd
 #> # ... with 28 more variables: location.city <chr>, location.state <chr>,
-#> #   location.country <chr>, location.postcode <chr>,
+#> #   location.country <chr>, location.postcode <dbl>,
 #> #   location.coordinates.latitude <dbl>, location.coordinates.longitude <dbl>,
 #> #   location.timezone.offset <chr>, location.timezone.description <chr>,
 #> #   email <chr>, login.uuid <chr>, login.username <chr>, login.password <chr>,
@@ -114,21 +114,15 @@ If you need some user images, it’s easy to get:
 ``` r
 
 library(dplyr)
-#> 
-#> Attaching package: 'dplyr'
-#> The following objects are masked from 'package:stats':
-#> 
-#>     filter, lag
-#> The following objects are masked from 'package:base':
-#> 
-#>     intersect, setdiff, setequal, union
 
-random_image <- get_data(n = 5) %>% select(picture.medium) %>% pull()
+random_image <- get_data(n = 1) %>% select(picture.large) %>% pull()
 
-knitr::include_graphics(random_image)
+htmltools::img(src = random_image, height = "150px", width = "150px")
 ```
 
-<img src="https://randomuser.me/api/portraits/med/men/79.jpg" width="50%" height="50%" /><img src="https://randomuser.me/api/portraits/med/men/74.jpg" width="50%" height="50%" /><img src="https://randomuser.me/api/portraits/med/women/19.jpg" width="50%" height="50%" /><img src="https://randomuser.me/api/portraits/med/women/82.jpg" width="50%" height="50%" /><img src="https://randomuser.me/api/portraits/med/women/10.jpg" width="50%" height="50%" />
+<!--html_preserve-->
+
+<img src="https://randomuser.me/api/portraits/women/48.jpg" height="150px" width="150px"/><!--/html_preserve-->
 
 ## Code of Conduct
 
