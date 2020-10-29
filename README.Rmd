@@ -18,7 +18,12 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-`radous` allows you to generate random user data from the [Random User Generator API](https://randomuser.me/)
+`radous` allows you to generate random user data from the [Random User Generator API](https://randomuser.me/) which can be useful in many situations : 
+
+- Teaching;
+- Testing a function; 
+- Testing an application (Shiny, Dash or others)
+
 
 ## Installation
 

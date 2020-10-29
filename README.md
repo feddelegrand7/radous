@@ -8,7 +8,12 @@
 <!-- badges: end -->
 
 `radous` allows you to generate random user data from the [Random User
-Generator API](https://randomuser.me/)
+Generator API](https://randomuser.me/) which can be useful in many
+situations :
+
+  - Teaching;
+  - Testing a function;
+  - Testing an application (Shiny, Dash or others)
 
 ## Installation
 
@@ -36,16 +41,16 @@ get_data(n = 10)
 #> # A tibble: 10 x 34
 #>    gender name.title name.first name.last location.street~ location.street~
 #>    <chr>  <chr>      <chr>      <chr>                <dbl> <chr>           
-#>  1 female Miss       Afsar      Akgül                 3553 Sehitler Cd     
-#>  2 male   Mr         Soan       Dumas                 5985 Grande Rue      
-#>  3 male   Mr         Iker       Rubio                 5160 Paseo de Zorril~
-#>  4 female Miss       Ida        Christia~              633 Marsvej         
-#>  5 male   Mr         Kadir      Ekici                 7257 Abanoz Sk       
-#>  6 male   Mr         Edward     Anderson              6438 Te Atatu Road   
-#>  7 male   Mr         Lino       Vidal                  832 Rue Duquesne    
-#>  8 male   Monsieur   Muhamed    Moreau                4439 Rue Abel        
-#>  9 male   Mr         Tim        Caron                 9924 Rue Pasteur     
-#> 10 female Ms         Nina       Burke                 4505 Rolling Green Rd
+#>  1 male   Mr         Alexander  Jones                 5199 Riccarton Road  
+#>  2 male   Mr         Ben        Gustafss~             3337 Borger Withs ga~
+#>  3 male   Mr         Nikolai    Romundst~             2697 Sverre Iversens~
+#>  4 female Mrs        Samantha   Wilson                6208 Weymouth Road   
+#>  5 female Mrs        Sam        Kelley                4978 Main Street     
+#>  6 female Ms         Kristen    Wade                  9714 Hamilton Ave    
+#>  7 female Mrs        Clarisse   Laurent               4706 Esplanade du 9 ~
+#>  8 female Mrs        Alexia     Duval                 9299 Avenue Joliot C~
+#>  9 female Mrs        Stacy      Hernandez             7248 Groveland Terra~
+#> 10 male   Mr         Phillip    Harrison              2362 Mockingbird Ln  
 #> # ... with 28 more variables: location.city <chr>, location.state <chr>,
 #> #   location.country <chr>, location.postcode <dbl>,
 #> #   location.coordinates.latitude <dbl>, location.coordinates.longitude <dbl>,
@@ -122,7 +127,7 @@ htmltools::img(src = random_image, height = "150px", width = "150px")
 
 <!--html_preserve-->
 
-<img src="https://randomuser.me/api/portraits/women/48.jpg" height="150px" width="150px"/><!--/html_preserve-->
+<img src="https://randomuser.me/api/portraits/women/31.jpg" height="150px" width="150px"/><!--/html_preserve-->
 
 ## Code of Conduct
 
