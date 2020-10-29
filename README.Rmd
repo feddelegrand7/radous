@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 # radous
 
 <!-- badges: start -->
+[![R build status](https://github.com/feddelegrand7/radous/workflows/R-CMD-check/badge.svg)](https://github.com/feddelegrand7/radous/actions)
 <!-- badges: end -->
 
 `radous` allows you to generate random user data from the [Random User Generator API](https://randomuser.me/) which can be useful in many situations : 
@@ -90,7 +91,7 @@ htmltools::img(src = random_image, height = "150px", width = "150px")
 
 ## Teaching with `radous` 
 
-The generated data has 34 variables (columns) with different types of information that you can play with. The data frame is particularly suited for teaching the tidyverse, here some example: 
+The generated data has 34 variables (columns) with different types of information that you can play with. The data frame is particularly suited for teaching the tidyverse, here some examples: 
 
 #### Select 
 
@@ -131,7 +132,7 @@ df %>% filter(nat == "US")
 ```
 
 
-### relocate 
+#### relocate 
 
 
 > Relocating the last column `nat` to the beginning: 
@@ -142,7 +143,7 @@ df %>% relocate(nat, before = gender)
 
 ```
 
-### group_by & summarise
+#### group_by & summarise
 
 
 > Calculating median age by gender:
@@ -156,7 +157,7 @@ df %>% group_by(gender) %>%
 
 
 ```
-### count, arrange & desc
+#### count, arrange & desc
 
 
 > Getting the number of users per country of residence:

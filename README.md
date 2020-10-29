@@ -5,6 +5,8 @@
 
 <!-- badges: start -->
 
+[![R build
+status](https://github.com/feddelegrand7/radous/workflows/R-CMD-check/badge.svg)](https://github.com/feddelegrand7/radous/actions)
 <!-- badges: end -->
 
 `radous` allows you to generate random user data from the [Random User
@@ -43,16 +45,16 @@ get_data(n = 10)
 #> # A tibble: 10 x 34
 #>    gender name_title name_first name_last location_street~ location_street~
 #>    <chr>  <chr>      <chr>      <chr>                <dbl> <chr>           
-#>  1 female Mrs        Olivia     Morin                 6219 Dalhousie Ave   
-#>  2 male   Mr         Jonathan   Burke                 8489 Windsor Road    
-#>  3 female Ms         Eevi       Waisanen              6966 Pyynikintie     
-#>  4 female Miss       Melike     Düsenkal~             3688 Atatürk Sk      
-#>  5 female Mrs        Diane      Giraud                2198 Avenue Vauban   
-#>  6 male   Mr         Mario      Foster                2328 Spring Hill Rd  
-#>  7 male   Mr         Lee        Watson                9876 Locust Rd       
-#>  8 male   Mr         Jason      Flores                 859 Poplar Dr       
-#>  9 male   Mr         Leroy      Martinez              2120 Mcclellan Rd    
-#> 10 male   Mr         Lincoln    Martin                6039 Pakowhai Road   
+#>  1 female Ms         Eevi       Waisanen              9390 Pispalan Valtat~
+#>  2 female Mrs        Brooklyn   Harper                1704 Ash Dr          
+#>  3 female Mrs        Isabella   Jensen                2197 Tyttebærvej     
+#>  4 male   Mr         Marshall   Rogers                4491 Main Road       
+#>  5 female Ms         Desireé    Akker                 4201 Kwartelhoek     
+#>  6 male   Mr         Pelle      Røyland               3363 Sorgenfrigata   
+#>  7 male   Mr         Connor     Harris                6836 Hoon Hay Road   
+#>  8 female Ms         Heather    Clark                 4038 Parker Rd       
+#>  9 female Mrs        Linnea     Suomi                 7107 Mannerheimintie 
+#> 10 male   Mr         Henny      Sommers               4638 Amsteldijk-Zuid 
 #> # ... with 28 more variables: location_city <chr>, location_state <chr>,
 #> #   location_country <chr>, location_postcode <chr>,
 #> #   location_coordinates_latitude <dbl>, location_coordinates_longitude <dbl>,
@@ -129,13 +131,13 @@ htmltools::img(src = random_image, height = "150px", width = "150px")
 
 <!--html_preserve-->
 
-<img src="https://randomuser.me/api/portraits/women/95.jpg" height="150px" width="150px"/><!--/html_preserve-->
+<img src="https://randomuser.me/api/portraits/women/45.jpg" height="150px" width="150px"/><!--/html_preserve-->
 
 ## Teaching with `radous`
 
 The generated data has 34 variables (columns) with different types of
 information that you can play with. The data frame is particularly
-suited for teaching the tidyverse, here some example:
+suited for teaching the tidyverse, here some examples:
 
 #### Select
 
@@ -203,7 +205,7 @@ df %>% filter(nat == "US")
 #> #   picture_thumbnail <chr>, nat <chr>
 ```
 
-### relocate
+#### relocate
 
 > Relocating the last column `nat` to the beginning:
 
@@ -235,7 +237,7 @@ df %>% relocate(nat, before = gender)
 #> #   picture_medium <chr>, picture_thumbnail <chr>
 ```
 
-### group\_by & summarise
+#### group\_by & summarise
 
 > Calculating median age by gender:
 
@@ -251,7 +253,7 @@ df %>% group_by(gender) %>%
 #> 2 male         49
 ```
 
-### count, arrange & desc
+#### count, arrange & desc
 
 > Getting the number of users per country of residence:
 
