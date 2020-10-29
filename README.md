@@ -45,16 +45,16 @@ get_data(n = 10)
 #> # A tibble: 10 x 34
 #>    gender name_title name_first name_last location_street~ location_street~
 #>    <chr>  <chr>      <chr>      <chr>                <dbl> <chr>           
-#>  1 female Ms         Eevi       Waisanen              9390 Pispalan Valtat~
-#>  2 female Mrs        Brooklyn   Harper                1704 Ash Dr          
-#>  3 female Mrs        Isabella   Jensen                2197 Tyttebærvej     
-#>  4 male   Mr         Marshall   Rogers                4491 Main Road       
-#>  5 female Ms         Desireé    Akker                 4201 Kwartelhoek     
-#>  6 male   Mr         Pelle      Røyland               3363 Sorgenfrigata   
-#>  7 male   Mr         Connor     Harris                6836 Hoon Hay Road   
-#>  8 female Ms         Heather    Clark                 4038 Parker Rd       
-#>  9 female Mrs        Linnea     Suomi                 7107 Mannerheimintie 
-#> 10 male   Mr         Henny      Sommers               4638 Amsteldijk-Zuid 
+#>  1 male   Mr         Elijah     Chen                  7118 Tremaine Avenue 
+#>  2 male   Mr         Nikolaj    Olsen                 7590 Gammel Skolevej 
+#>  3 female Mrs        Margit     Patzer                2609 Birkenstraße    
+#>  4 male   Mr         Seth       Obrien                7683 Church Road     
+#>  5 male   Mr         Ibrahim    Worst                 4384 Kolerhof        
+#>  6 male   Mr         Mathieu    Guerin                4439 Rue André-Gide  
+#>  7 female Miss       Ida        Madsen                8202 Bøgevænget      
+#>  8 female Ms         Anna       Scott                 2389 New Road        
+#>  9 female Ms         Addison    Knight                8362 College Ave     
+#> 10 male   Mr         Mitchell   Gilbert               4440 The Crescent    
 #> # ... with 28 more variables: location_city <chr>, location_state <chr>,
 #> #   location_country <chr>, location_postcode <chr>,
 #> #   location_coordinates_latitude <dbl>, location_coordinates_longitude <dbl>,
@@ -131,7 +131,7 @@ htmltools::img(src = random_image, height = "150px", width = "150px")
 
 <!--html_preserve-->
 
-<img src="https://randomuser.me/api/portraits/women/45.jpg" height="150px" width="150px"/><!--/html_preserve-->
+<img src="https://randomuser.me/api/portraits/men/91.jpg" height="150px" width="150px"/><!--/html_preserve-->
 
 ## Teaching with `radous`
 
