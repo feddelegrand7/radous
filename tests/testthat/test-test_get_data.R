@@ -3,8 +3,9 @@ data <- httr::GET("https://randomuser.me/api/?seed=123&results=10&format=csv")
 
 text <- httr::content(data, as = "text")
 
-final <- readr::read_csv(text)
+data <- readr::read_csv(text)
 
+final <- janitor::clean_names(data)
 
 
 test_that("testing identical results", {

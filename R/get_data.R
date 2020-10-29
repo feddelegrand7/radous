@@ -3,11 +3,11 @@
 #' @param n Number of users to fetch, up to 5,000 generated users in one request. Defaults to 1
 #' @param seed A character string used to generate the same set of users. Defaults to NULL.
 #'
-#' @return A tibble that contains random user data 
+#' @return A tibble that contains random user data
 #' @export
 #'
 #' @examples
-#' 
+#'
 #' get_data(n = 10, seed = "1990")
 #'
 
@@ -27,6 +27,12 @@ data <- httr::GET(link)
 
 text <- httr::content(data, as = "text")
 
-return(readr::read_csv(text))
+data <- readr::read_csv(text)
+
+data <- janitor::clean_names(data)
+
+return(data)
+
+
 
 }
