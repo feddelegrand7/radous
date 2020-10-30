@@ -1,10 +1,10 @@
 Package: radous
 Type: Package
-Title: Query Random User Data From the Random User Generator API
+Title: Query Random User Data from the Random User Generator API
 Version: 0.1.0
 Author: Mohamed El Fodil Ihaddaden
 Maintainer: Mohamed El Fodil Ihaddaden <ihaddaden.fodeil@gmail.com>
-Description: The packages allows to generate random user data from the Random User Generator API.
+Description: Generate random user data from the Random User Generator API.
     For more information, see <https://randomuser.me/>.
 License: MIT + file LICENSE
 Encoding: UTF-8
