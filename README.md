@@ -7,6 +7,8 @@
 
 [![R build
 status](https://github.com/feddelegrand7/radous/workflows/R-CMD-check/badge.svg)](https://github.com/feddelegrand7/radous/actions)
+[![Codecov test
+coverage](https://codecov.io/gh/feddelegrand7/radous/branch/master/graph/badge.svg)](https://codecov.io/gh/feddelegrand7/radous?branch=master)
 <!-- badges: end -->
 
 `radous` allows you to generate random user data from the [Random User
@@ -45,16 +47,16 @@ get_data(n = 10)
 #> # A tibble: 10 x 34
 #>    gender name_title name_first name_last location_street~ location_street~
 #>    <chr>  <chr>      <chr>      <chr>                <dbl> <chr>           
-#>  1 male   Mr         Elijah     Chen                  7118 Tremaine Avenue 
-#>  2 male   Mr         Nikolaj    Olsen                 7590 Gammel Skolevej 
-#>  3 female Mrs        Margit     Patzer                2609 Birkenstraße    
-#>  4 male   Mr         Seth       Obrien                7683 Church Road     
-#>  5 male   Mr         Ibrahim    Worst                 4384 Kolerhof        
-#>  6 male   Mr         Mathieu    Guerin                4439 Rue André-Gide  
-#>  7 female Miss       Ida        Madsen                8202 Bøgevænget      
-#>  8 female Ms         Anna       Scott                 2389 New Road        
-#>  9 female Ms         Addison    Knight                8362 College Ave     
-#> 10 male   Mr         Mitchell   Gilbert               4440 The Crescent    
+#>  1 female Mrs        Brittany   Gonzales              6422 W Sherman Dr    
+#>  2 female Ms         Lidija     Wall                  4167 Ahornweg        
+#>  3 male   Mr         Austin     Edwards               3153 Dublin Road     
+#>  4 male   Mr         Guillermo  Ruiz                  4996 Calle de La Dem~
+#>  5 female Ms         Laurie     Scott                 4937 Dundas Rd       
+#>  6 male   Mr         Oscar      Hughes                9279 Cambridge Terra~
+#>  7 female Mademoise~ Véronique  Meunier               1771 Avenue Paul Elu~
+#>  8 male   Mr         Jurn       Van Til               6128 Jacob Roggeveen~
+#>  9 female Mrs        Judith     Burton                4984 The Drive       
+#> 10 male   Mr         Solaiman   Harmsen               7109 Het Ambt        
 #> # ... with 28 more variables: location_city <chr>, location_state <chr>,
 #> #   location_country <chr>, location_postcode <chr>,
 #> #   location_coordinates_latitude <dbl>, location_coordinates_longitude <dbl>,
@@ -131,7 +133,7 @@ htmltools::img(src = random_image, height = "150px", width = "150px")
 
 <!--html_preserve-->
 
-<img src="https://randomuser.me/api/portraits/men/91.jpg" height="150px" width="150px"/><!--/html_preserve-->
+<img src="https://randomuser.me/api/portraits/women/6.jpg" height="150px" width="150px"/><!--/html_preserve-->
 
 ## Teaching with `radous`
 

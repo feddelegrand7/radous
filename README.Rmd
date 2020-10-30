@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 # radous
 <!-- badges: start -->
 [![R build status](https://github.com/feddelegrand7/radous/workflows/R-CMD-check/badge.svg)](https://github.com/feddelegrand7/radous/actions)
+[![Codecov test coverage](https://codecov.io/gh/feddelegrand7/radous/branch/master/graph/badge.svg)](https://codecov.io/gh/feddelegrand7/radous?branch=master)
 <!-- badges: end -->
 
 `radous` allows you to generate random user data from the [Random User Generator API](https://randomuser.me/) which can be useful in many situations : 
