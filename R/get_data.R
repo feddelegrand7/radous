@@ -14,6 +14,14 @@
 get_data <- function(n = 1, seed = NULL) {
 
 
+checkmate::assert_number(n,
+                         na.ok = FALSE,
+                         lower = 0,
+                         upper = 5000,
+                         finite = TRUE)
+
+checkmate::assert_character(seed, null.ok = TRUE)
+
 link <- ifelse(is.null(seed),
 
 glue::glue("https://randomuser.me/api/?results={n}&format=csv"),
