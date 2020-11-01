@@ -47,16 +47,16 @@ get_data(n = 10)
 #> # A tibble: 10 x 34
 #>    gender name_title name_first name_last location_street~ location_street~
 #>    <chr>  <chr>      <chr>      <chr>                <dbl> <chr>           
-#>  1 female Miss       Raimunda   Oliveira               566 Rua Paraíba     
-#>  2 female Mrs        Adeli      Nascimen~             6178 Rua da Paz      
-#>  3 male   Mr         Clinton    Moreno                7623 Albert Road     
-#>  4 female Ms         Elsie      Walker                8591 W Sherman Dr    
-#>  5 female Mrs        <U+0622><U+06CC><U+0646><U+0627><U+0632>      <U+0633><U+0647><U+064A><U+0644><U+064A> <U+0631><U+0627><U+062F>             9074 <U+0628><U+0631><U+0627><U+062F><U+0631><U+0627><U+0646> <U+0633><U+0644><U+06CC><U+0645><U+0627><U+0646><U+06CC> 
-#>  6 male   Mr         Willard    Hudson                4250 Henry Street    
-#>  7 female Ms         Heather    Stephens              6122 Smokey Ln       
-#>  8 male   Mr         Marco      Nieto                 4438 Calle de Atocha 
-#>  9 female Miss       Danielle   Watkins               1901 Queen Street    
-#> 10 male   Mr         Benjamin   Denys                 5993 York St         
+#>  1 male   Mr         Léonard    Fabre                 4793 Rue de L'Abbé-G~
+#>  2 male   Mr         Samson     Berhe                 2540 Nedre gate      
+#>  3 female Ms         Sue        Wilson                9489 Hamilton Ave    
+#>  4 female Mrs        Isabella   Willis                1949 Broadway        
+#>  5 male   Mr         Roland     Hernandez             1101 Camden Ave      
+#>  6 male   Mr         Hamsa      Ramautar              9099 Bracbant        
+#>  7 female Ms         Kim        Stone                 8313 Station Road    
+#>  8 male   Mr         Jens       Taube                 3621 Lessingstraße   
+#>  9 female Ms         Rhonda     Martin                5832 Wycliff Ave     
+#> 10 male   Mr         <U+0633><U+0648><U+0631><U+0646><U+0627>      <U+0633><U+0647><U+064A><U+0644><U+064A> <U+0631><U+0627><U+062F>             6872 <U+0645><U+06CC><U+062F><U+0627><U+0646> <U+0622><U+0632><U+0627><U+062F><U+06CC>     
 #> # ... with 28 more variables: location_city <chr>, location_state <chr>,
 #> #   location_country <chr>, location_postcode <chr>,
 #> #   location_coordinates_latitude <dbl>, location_coordinates_longitude <dbl>,
@@ -133,9 +133,9 @@ htmltools::img(src = random_image, height = "150px", width = "150px")
 
 <!--html_preserve-->
 
-<img src="https://randomuser.me/api/portraits/men/72.jpg" height="150px" width="150px"/><!--/html_preserve-->
+<img src="https://randomuser.me/api/portraits/men/92.jpg" height="150px" width="150px"/><!--/html_preserve-->
 
-## Teaching with `radous`
+## Teaching with `radous` 👨‍🏫
 
 The generated data has 34 variables (columns) with different types of
 information that you can play with. The data frame is particularly

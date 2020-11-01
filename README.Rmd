@@ -88,8 +88,7 @@ htmltools::img(src = random_image, height = "150px", width = "150px")
 ```
 
 
-## Teaching with `radous` 
-
+## Teaching with `radous` 👨‍🏫
 
 The generated data has 34 variables (columns) with different types of information that you can play with. The data frame is particularly suited for teaching the tidyverse, here some examples: 
 
