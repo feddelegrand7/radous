@@ -47,16 +47,16 @@ get_data(n = 10)
 # A tibble: 10 x 34
    gender name_title name_first name_last location_street~ location_street~
    <chr>  <chr>      <chr>      <chr>                <dbl> <chr>           
- 1 female Madame     Gianna     Jean                  6794 Rue Denfert-Roc~
- 2 female Miss       <U+067E><U+0627><U+0631><U+0645><U+06CC><U+0633>     <U+0646><U+0643><U+0648> <U+0646><U+0638><U+0631>               5033 <U+062C><U+0644><U+0627><U+0644> <U+0622><U+0644> <U+0627><U+062D><U+0645><U+062F>    
- 3 male   Mr         Eliezer    Lopes                 3992 Rua Paraná      
- 4 female Mrs        <U+0622><U+062F><U+0631><U+06CC><U+0646><U+0627>     <U+0633><U+0644><U+0637><U+0627><U+0646><U+06CC> <U+0646>~              399 <U+067E><U+0627><U+0631><U+06A9> <U+0627><U+0631><U+0645>        
- 5 female Ms         Lillian    Wagner                7447 Broadway        
- 6 male   Mr         Imran      Ihle                  6034 Østre Holmensvi~
- 7 female Ms         Cléa       Roger                   15 Place de L'Abbé~
- 8 female Madame     Mirella    Durand                5808 Rue de L'Église 
- 9 female Madame     Grazia     Gaillard              9787 Rue Desaix      
-10 female Mademoise~ Giorgia    Roy                   5611 Rue Baraban     
+ 1 male   Mr         Pierre     Lopez                  590 Rue Abel-Ferry  
+ 2 male   Mr         Louis      Cole                  1166 King Street     
+ 3 male   Mr         Rafael     Muñoz                 4773 Avenida de Sala~
+ 4 male   Mr         Wallace    Stevens               5981 Pockrus Page Rd 
+ 5 female Miss       Teresa     Moya                  8417 Calle de Toledo 
+ 6 male   Mr         Oskari     Waisanen              7122 Hatanpään Valta~
+ 7 female Miss       Alice      Johnson               9217 Oxford Terrace  
+ 8 male   Mr         Sasha      Bertrand              5260 Rue de L'Abbé-G~
+ 9 female Miss       Caroline   Russell               3237 Hickory Creek Dr
+10 female Miss       Kim        Vargas                6124 Hunters Creek Dr
 # ... with 28 more variables: location_city <chr>, location_state <chr>,
 #   location_country <chr>, location_postcode <chr>,
 #   location_coordinates_latitude <dbl>, location_coordinates_longitude <dbl>,
@@ -133,7 +133,7 @@ htmltools::img(src = random_image, height = "150px", width = "150px")
 
 <!--html_preserve-->
 
-<img src="https://randomuser.me/api/portraits/men/90.jpg" height="150px" width="150px"/><!--/html_preserve-->
+<img src="https://randomuser.me/api/portraits/men/23.jpg" height="150px" width="150px"/><!--/html_preserve-->
 
 ## Teaching with `radous` 👨‍🏫
 

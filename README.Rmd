@@ -13,7 +13,6 @@ knitr::opts_chunk$set(
   out.width = "100%"
 )
 ```
-
 # radous
 <!-- badges: start -->
 [![R build status](https://github.com/feddelegrand7/radous/workflows/R-CMD-check/badge.svg)](https://github.com/feddelegrand7/radous/actions)
