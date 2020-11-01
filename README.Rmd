@@ -8,7 +8,7 @@ output: github_document
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>",
+  comment = "",
   fig.path = "man/figures/README-",
   out.width = "100%"
 )
@@ -185,6 +185,26 @@ df %>%
 ```
 
 </details>
+
+
+#### filter & str_detect
+
+
+<details>
+
+<summary>
+
+> Filtering out the users that have a cell number that begins with 081:
+
+</summary>
+
+```{r}
+df %>% select(1:3, cell) %>% 
+  filter(str_detect(cell, "081"))
+  
+  
+```
+
 
 ## Code of Conduct
 
