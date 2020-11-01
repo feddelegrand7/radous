@@ -19,7 +19,7 @@ situations :
   - Testing a function;
   - Testing an application (Shiny, Dash or others)
 
-You can generate up to 5000 observations in one query.
+**You can generate up to 5000 observations in one query.**
 
 ## Installation
 
@@ -47,16 +47,16 @@ get_data(n = 10)
 #> # A tibble: 10 x 34
 #>    gender name_title name_first name_last location_street~ location_street~
 #>    <chr>  <chr>      <chr>      <chr>                <dbl> <chr>           
-#>  1 female Mrs        Brittany   Gonzales              6422 W Sherman Dr    
-#>  2 female Ms         Lidija     Wall                  4167 Ahornweg        
-#>  3 male   Mr         Austin     Edwards               3153 Dublin Road     
-#>  4 male   Mr         Guillermo  Ruiz                  4996 Calle de La Dem~
-#>  5 female Ms         Laurie     Scott                 4937 Dundas Rd       
-#>  6 male   Mr         Oscar      Hughes                9279 Cambridge Terra~
-#>  7 female Mademoise~ Véronique  Meunier               1771 Avenue Paul Elu~
-#>  8 male   Mr         Jurn       Van Til               6128 Jacob Roggeveen~
-#>  9 female Mrs        Judith     Burton                4984 The Drive       
-#> 10 male   Mr         Solaiman   Harmsen               7109 Het Ambt        
+#>  1 female Miss       Raimunda   Oliveira               566 Rua Paraíba     
+#>  2 female Mrs        Adeli      Nascimen~             6178 Rua da Paz      
+#>  3 male   Mr         Clinton    Moreno                7623 Albert Road     
+#>  4 female Ms         Elsie      Walker                8591 W Sherman Dr    
+#>  5 female Mrs        <U+0622><U+06CC><U+0646><U+0627><U+0632>      <U+0633><U+0647><U+064A><U+0644><U+064A> <U+0631><U+0627><U+062F>             9074 <U+0628><U+0631><U+0627><U+062F><U+0631><U+0627><U+0646> <U+0633><U+0644><U+06CC><U+0645><U+0627><U+0646><U+06CC> 
+#>  6 male   Mr         Willard    Hudson                4250 Henry Street    
+#>  7 female Ms         Heather    Stephens              6122 Smokey Ln       
+#>  8 male   Mr         Marco      Nieto                 4438 Calle de Atocha 
+#>  9 female Miss       Danielle   Watkins               1901 Queen Street    
+#> 10 male   Mr         Benjamin   Denys                 5993 York St         
 #> # ... with 28 more variables: location_city <chr>, location_state <chr>,
 #> #   location_country <chr>, location_postcode <chr>,
 #> #   location_coordinates_latitude <dbl>, location_coordinates_longitude <dbl>,
@@ -133,7 +133,7 @@ htmltools::img(src = random_image, height = "150px", width = "150px")
 
 <!--html_preserve-->
 
-<img src="https://randomuser.me/api/portraits/women/6.jpg" height="150px" width="150px"/><!--/html_preserve-->
+<img src="https://randomuser.me/api/portraits/men/72.jpg" height="150px" width="150px"/><!--/html_preserve-->
 
 ## Teaching with `radous`
 
@@ -143,15 +143,19 @@ suited for teaching the tidyverse, here some examples:
 
 #### Select
 
+<details>
+
+<summary>
+
 > Here we select columns that are related to users’ location:
+
+</summary>
 
 ``` r
 
 library(tidyverse)
 
-
 df <- get_data(n = 500, seed = 123)
-
 
 df %>% select(contains("location"))
 #> # A tibble: 500 x 10
@@ -173,13 +177,19 @@ df %>% select(contains("location"))
 #> #   location_timezone_description <chr>
 ```
 
+</details>
+
 #### Filter
+
+<details>
+
+<summary>
 
 > Getting the users that are US citizens:
 
+</summary>
+
 ``` r
-
-
 
 df %>% filter(nat == "US")
 #> # A tibble: 25 x 34
@@ -207,9 +217,17 @@ df %>% filter(nat == "US")
 #> #   picture_thumbnail <chr>, nat <chr>
 ```
 
+</details>
+
 #### relocate
 
+<details>
+
+<summary>
+
 > Relocating the last column `nat` to the beginning:
+
+</summary>
 
 ``` r
 
@@ -239,9 +257,17 @@ df %>% relocate(nat, before = gender)
 #> #   picture_medium <chr>, picture_thumbnail <chr>
 ```
 
+</details>
+
 #### group\_by & summarise
 
+<details>
+
+<summary>
+
 > Calculating median age by gender:
+
+</summary>
 
 ``` r
 
@@ -255,12 +281,19 @@ df %>% group_by(gender) %>%
 #> 2 male         49
 ```
 
+</details>
+
 #### count, arrange & desc
 
+<details>
+
+<summary>
+
 > Getting the number of users per country of residence:
+> 
+> </summary>
 
 ``` r
-
 df %>% 
   count(location_country) %>% 
   arrange(desc(n))
@@ -285,6 +318,8 @@ df %>%
 #> 16 Brazil              22
 #> 17 Denmark             20
 ```
+
+</details>
 
 ## Code of Conduct
 

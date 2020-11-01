@@ -4,6 +4,7 @@ output: github_document
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
+
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
@@ -25,7 +26,7 @@ knitr::opts_chunk$set(
 - Testing a function; 
 - Testing an application (Shiny, Dash or others)
 
-You can generate up to 5000 observations in one query.
+__You can generate up to 5000 observations in one query.__
 
 
 ## Installation
@@ -37,7 +38,6 @@ You can install the development version of `radous` from [GitHub](https://github
 #install.packages("remotes") ---- If not installed
 
 remotes::install_github("feddelegrand7/radous")
-
 
 ```
 
@@ -85,93 +85,107 @@ random_image <- get_data(n = 1) %>% select(picture_large) %>% pull()
 
 htmltools::img(src = random_image, height = "150px", width = "150px")
 
-
 ```
 
 
 ## Teaching with `radous` 
+
 
 The generated data has 34 variables (columns) with different types of information that you can play with. The data frame is particularly suited for teaching the tidyverse, here some examples: 
 
 #### Select 
 
 
+<details>
+
+<summary>
+
 > Here we select columns that are related to users' location:
 
+</summary>
 
 ```{r message=FALSE, warning=FALSE}
 
 library(tidyverse)
 
-
 df <- get_data(n = 500, seed = 123)
-
 
 df %>% select(contains("location"))
 
-
-
 ```
-
-
-
+</details>
 
 
 #### Filter 
 
+<details>
+
+<summary>
 
 > Getting the users that are US citizens:
 
+</summary>
 
 ```{r message=FALSE, warning=FALSE}
-
-
 
 df %>% filter(nat == "US")
 
 ```
 
+</details>
 
 #### relocate 
 
+<details>
+
+<summary>
 
 > Relocating the last column `nat` to the beginning: 
+
+</summary>
 
 ```{r}
 
 df %>% relocate(nat, before = gender)
 
 ```
+</details>
 
 #### group_by & summarise
 
 
+<details>
+
+<summary>
+
 > Calculating median age by gender:
 
+</summary>
 
 ```{r}
 
 df %>% group_by(gender) %>% 
   summarise(median_age = median(dob_age))
-
-
-
 ```
+</details>
+
 #### count, arrange & desc
 
+<details>
+
+<summary>
 
 > Getting the number of users per country of residence:
+> 
+</summary>
 
 ```{r}
-
 df %>% 
   count(location_country) %>% 
   arrange(desc(n))
-
-
-
 ```
 
+</details>
 
 ## Code of Conduct
 
