@@ -33,14 +33,10 @@ situations :
 
 ## Installation
 
-You can install the development version of `radous` from
-[GitHub](https://github.com/) with:
+You can install `radous` from CRAN with : 
 
 ``` r
-
-#install.packages("remotes") ---- If not installed
-
-remotes::install_github("feddelegrand7/radous")
+install.packages('radous')
 ```
 
 ## Usage
