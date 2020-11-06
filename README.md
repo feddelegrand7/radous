@@ -18,7 +18,7 @@ downloads](https://cranlogs.r-pkg.org/badges/radous)](https://cran.r-project.org
 downloads](https://cranlogs.r-pkg.org/badges/grand-total/radous)](https://cran.r-project.org/package=radous)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://choosealicense.com/licenses/mit/)
 [![R
-badge](https://img.shields.io/badge/Build%20with-♥%20and%20R-peru)](https://github.com/feddelegrand7/radous)
+badge](https://img.shields.io/badge/Build%20with-♥%20and%20R-#B30B00)](https://github.com/feddelegrand7/radous)
 <!-- badges: end -->
 
 `radous` allows you to generate random user data from the [Random User
