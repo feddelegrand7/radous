@@ -101,6 +101,8 @@ htmltools::img(src = random_image, height = "150px", width = "150px")
 ```
 
 
+> Note that All randomly generated photos come from the authorized section of [UI Faces](https://uifaces.co/). 
+
 ## Teaching with `radous` 👨‍🏫
 
 The generated data has 34 variables (columns) with different types of information that you can play with. The data frame is particularly suited for teaching the tidyverse, here some examples: 

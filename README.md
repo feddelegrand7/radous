@@ -58,18 +58,18 @@ get_data(n = 10)
 # A tibble: 10 x 34
    gender name_title name_first name_last location_street~ location_street~
    <chr>  <chr>      <chr>      <chr>                <dbl> <chr>           
- 1 female Miss       Ege        Çamdali                446 Doktorlar Cd    
- 2 male   Mr         Tristan    Møller                3864 Knudskovparken  
- 3 female Mrs        Ankje      Groeneve~             1529 Kortenaarlaan   
- 4 male   Mr         Anton      Hakala                7605 Hatanpään Valta~
- 5 male   Mr         Gregorio   Marin                 1398 Calle de La Luna
- 6 male   Mr         Silvano    Perdon                5247 Beenekussteeg   
- 7 male   Monsieur   Raul       Roche                 7482 Avenue Debourg  
- 8 male   Mr         Eli        White                 4737 Bridge Street   
- 9 female Mrs        Anni       Saari                 8086 Fredrikinkatu   
-10 female Ms         Othilie    Mustafa               3837 Hekkveien       
+ 1 female Miss       Charina    Ten Veen              7347 Kleine Visserij~
+ 2 female Mademoise~ Valeria    Meyer                 7346 Rue Paul-Duvivi~
+ 3 female Madame     Céline     Simon                 7212 Avenue Goerges ~
+ 4 female Miss       Fazilet    Kee                   9719 Admiraal Helfri~
+ 5 male   Mr         Umut       Türkyilm~             5125 Doktorlar Cd    
+ 6 female Ms         Nicoline   Petersen              9565 Kærsangervej    
+ 7 female Miss       Minttu     Salonen               3801 Rotuaari        
+ 8 male   Mr         Leo        Larson                 540 Lovers Ln       
+ 9 male   Mr         Arthur     Macrae                 183 Park Road       
+10 female Miss       Rosl       Klages                 819 Kirchweg        
 # ... with 28 more variables: location_city <chr>, location_state <chr>,
-#   location_country <chr>, location_postcode <dbl>,
+#   location_country <chr>, location_postcode <chr>,
 #   location_coordinates_latitude <dbl>, location_coordinates_longitude <dbl>,
 #   location_timezone_offset <chr>, location_timezone_description <chr>,
 #   email <chr>, login_uuid <chr>, login_username <chr>, login_password <chr>,
@@ -144,7 +144,10 @@ htmltools::img(src = random_image, height = "150px", width = "150px")
 
 <!--html_preserve-->
 
-<img src="https://randomuser.me/api/portraits/men/33.jpg" height="150px" width="150px"/><!--/html_preserve-->
+<img src="https://randomuser.me/api/portraits/men/35.jpg" height="150px" width="150px"/><!--/html_preserve-->
+
+> Note that All randomly generated photos come from the authorized
+> section of [UI Faces](https://uifaces.co/).
 
 ## Teaching with `radous` 👨‍🏫
 
