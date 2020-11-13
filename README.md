@@ -19,6 +19,7 @@ downloads](https://cranlogs.r-pkg.org/badges/grand-total/radous)](https://cran.r
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://choosealicense.com/licenses/mit/)
 [![R
 badge](https://img.shields.io/badge/Build%20with-♥%20and%20R-red)](https://github.com/feddelegrand7/radous)
+
 <!-- badges: end -->
 
 `radous` allows you to generate random user data from the [Random User
@@ -33,10 +34,14 @@ situations :
 
 ## Installation
 
-You can install `radous` from CRAN with : 
+You can install the development version of `radous` from
+[GitHub](https://github.com/) with:
 
 ``` r
-install.packages('radous')
+
+#install.packages("remotes") ---- If not installed
+
+remotes::install_github("feddelegrand7/radous")
 ```
 
 ## Usage
@@ -53,18 +58,18 @@ get_data(n = 10)
 # A tibble: 10 x 34
    gender name_title name_first name_last location_street~ location_street~
    <chr>  <chr>      <chr>      <chr>                <dbl> <chr>           
- 1 male   Mr         Francesco  Schalk                1850 Schulweg        
- 2 male   Mr         Gonzalo    Cruz                  2016 Avenida de Amér~
- 3 male   Mr         Christian  Knight                3928 North Street    
- 4 male   Mr         Prião      Santos                6677 Rua Paraíba     
- 5 female Miss       Encarnaci~ Alonso                5643 Avenida de La A~
- 6 male   Monsieur   Rosario    Picard                2263 Avenue Paul Elu~
- 7 male   Mr         Eeli       Wuori                 4581 Tahmelantie     
- 8 male   Mr         Brian      Mills                 6966 The Green       
- 9 female Mrs        Emilia     Fernandez             3411 Calle de Alcalá 
-10 female Mrs        Buse       Toraman               3482 Abanoz Sk       
+ 1 female Miss       Ege        Çamdali                446 Doktorlar Cd    
+ 2 male   Mr         Tristan    Møller                3864 Knudskovparken  
+ 3 female Mrs        Ankje      Groeneve~             1529 Kortenaarlaan   
+ 4 male   Mr         Anton      Hakala                7605 Hatanpään Valta~
+ 5 male   Mr         Gregorio   Marin                 1398 Calle de La Luna
+ 6 male   Mr         Silvano    Perdon                5247 Beenekussteeg   
+ 7 male   Monsieur   Raul       Roche                 7482 Avenue Debourg  
+ 8 male   Mr         Eli        White                 4737 Bridge Street   
+ 9 female Mrs        Anni       Saari                 8086 Fredrikinkatu   
+10 female Ms         Othilie    Mustafa               3837 Hekkveien       
 # ... with 28 more variables: location_city <chr>, location_state <chr>,
-#   location_country <chr>, location_postcode <chr>,
+#   location_country <chr>, location_postcode <dbl>,
 #   location_coordinates_latitude <dbl>, location_coordinates_longitude <dbl>,
 #   location_timezone_offset <chr>, location_timezone_description <chr>,
 #   email <chr>, login_uuid <chr>, login_username <chr>, login_password <chr>,
@@ -139,7 +144,7 @@ htmltools::img(src = random_image, height = "150px", width = "150px")
 
 <!--html_preserve-->
 
-<img src="https://randomuser.me/api/portraits/men/23.jpg" height="150px" width="150px"/><!--/html_preserve-->
+<img src="https://randomuser.me/api/portraits/men/33.jpg" height="150px" width="150px"/><!--/html_preserve-->
 
 ## Teaching with `radous` 👨‍🏫
 
