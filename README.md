@@ -9,6 +9,16 @@
 status](https://github.com/feddelegrand7/radous/workflows/R-CMD-check/badge.svg)](https://github.com/feddelegrand7/radous/actions)
 [![Codecov test
 coverage](https://codecov.io/gh/feddelegrand7/radous/branch/master/graph/badge.svg)](https://codecov.io/gh/feddelegrand7/radous?branch=master)
+[![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/radous)](https://cran.r-project.org/package=radous)
+[![CRAN\_time\_from\_release](https://www.r-pkg.org/badges/ago/radous)](https://cran.r-project.org/package=radous)
+[![CRAN\_latest\_release\_date](https://www.r-pkg.org/badges/last-release/radous)](https://cran.r-project.org/package=radous)
+[![metacran
+downloads](https://cranlogs.r-pkg.org/badges/radous)](https://cran.r-project.org/package=radous)
+[![metacran
+downloads](https://cranlogs.r-pkg.org/badges/grand-total/radous)](https://cran.r-project.org/package=radous)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://choosealicense.com/licenses/mit/)
+[![R
+badge](https://img.shields.io/badge/Build%20with-♥%20and%20R-red)](https://github.com/feddelegrand7/radous)
 <!-- badges: end -->
 
 `radous` allows you to generate random user data from the [Random User
@@ -23,14 +33,10 @@ situations :
 
 ## Installation
 
-You can install the development version of `radous` from
-[GitHub](https://github.com/) with:
+You can install `radous` from CRAN with : 
 
 ``` r
-
-#install.packages("remotes") ---- If not installed
-
-remotes::install_github("feddelegrand7/radous")
+install.packages('radous')
 ```
 
 ## Usage
