@@ -106,7 +106,7 @@ The generated data has 34 variables (columns) with different types of informatio
 
 library(tidyverse)
 
-df <- get_data(n = 500, seed = 123)
+df <- get_data(n = 500, seed = "123")
 
 df %>% select(contains("location"))
 
@@ -203,6 +203,7 @@ df %>% select(1:3, cell) %>%
   
   
 ```
+</details>
 
 
 ## Code of Conduct

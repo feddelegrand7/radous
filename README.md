@@ -47,16 +47,16 @@ get_data(n = 10)
 # A tibble: 10 x 34
    gender name_title name_first name_last location_street~ location_street~
    <chr>  <chr>      <chr>      <chr>                <dbl> <chr>           
- 1 male   Mr         Pierre     Lopez                  590 Rue Abel-Ferry  
- 2 male   Mr         Louis      Cole                  1166 King Street     
- 3 male   Mr         Rafael     Muñoz                 4773 Avenida de Sala~
- 4 male   Mr         Wallace    Stevens               5981 Pockrus Page Rd 
- 5 female Miss       Teresa     Moya                  8417 Calle de Toledo 
- 6 male   Mr         Oskari     Waisanen              7122 Hatanpään Valta~
- 7 female Miss       Alice      Johnson               9217 Oxford Terrace  
- 8 male   Mr         Sasha      Bertrand              5260 Rue de L'Abbé-G~
- 9 female Miss       Caroline   Russell               3237 Hickory Creek Dr
-10 female Miss       Kim        Vargas                6124 Hunters Creek Dr
+ 1 male   Mr         Francesco  Schalk                1850 Schulweg        
+ 2 male   Mr         Gonzalo    Cruz                  2016 Avenida de Amér~
+ 3 male   Mr         Christian  Knight                3928 North Street    
+ 4 male   Mr         Prião      Santos                6677 Rua Paraíba     
+ 5 female Miss       Encarnaci~ Alonso                5643 Avenida de La A~
+ 6 male   Monsieur   Rosario    Picard                2263 Avenue Paul Elu~
+ 7 male   Mr         Eeli       Wuori                 4581 Tahmelantie     
+ 8 male   Mr         Brian      Mills                 6966 The Green       
+ 9 female Mrs        Emilia     Fernandez             3411 Calle de Alcalá 
+10 female Mrs        Buse       Toraman               3482 Abanoz Sk       
 # ... with 28 more variables: location_city <chr>, location_state <chr>,
 #   location_country <chr>, location_postcode <chr>,
 #   location_coordinates_latitude <dbl>, location_coordinates_longitude <dbl>,
@@ -155,7 +155,7 @@ suited for teaching the tidyverse, here some examples:
 
 library(tidyverse)
 
-df <- get_data(n = 500, seed = 123)
+df <- get_data(n = 500, seed = "123")
 
 df %>% select(contains("location"))
 # A tibble: 500 x 10
@@ -349,6 +349,8 @@ df %>% select(1:3, cell) %>%
 10 female Ms         Deborah    081-984-3691
 # ... with 26 more rows
 ```
+
+</details>
 
 ## Code of Conduct
 
