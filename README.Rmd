@@ -44,13 +44,10 @@ __You can generate up to 5000 observations in one query.__
 
 ## Installation
 
-You can install the development version of `radous` from [GitHub](https://github.com/) with:
+You can `radous` from CRAN with:
 
 ```{r, eval=FALSE}
-
-#install.packages("remotes") ---- If not installed
-
-remotes::install_github("feddelegrand7/radous")
+install.packages("radous")
 
 ```
 
@@ -63,7 +60,6 @@ Suppose we want to generate 10 random user data:
 
 
 ```{r}
-
 library(radous)
 
 get_data(n = 10)
@@ -74,7 +70,6 @@ If you want to generate always the same set of users, you can use the `seed` arg
 
 
 ```{r}
-
 get_data(n = 5, seed = "1990")
 
 ```
@@ -83,7 +78,6 @@ get_data(n = 5, seed = "1990")
 Let's run the above code again to check if we get the same info: 
 
 ```{r}
-
 get_data(n = 5, seed = "1990")
 
 ```
@@ -91,7 +85,6 @@ get_data(n = 5, seed = "1990")
 If you need some user images, it's easy to get: 
 
 ```{r, message=FALSE, warning=FALSE}
-
 library(dplyr)
 
 random_image <- get_data(n = 1) %>% select(picture_large) %>% pull()
@@ -119,7 +112,6 @@ The generated data has 34 variables (columns) with different types of informatio
 </summary>
 
 ```{r message=FALSE, warning=FALSE}
-
 library(tidyverse)
 
 df <- get_data(n = 500, seed = "123")
@@ -141,7 +133,6 @@ df %>% select(contains("location"))
 </summary>
 
 ```{r message=FALSE, warning=FALSE}
-
 df %>% filter(nat == "US")
 
 ```
@@ -159,7 +150,6 @@ df %>% filter(nat == "US")
 </summary>
 
 ```{r}
-
 df %>% relocate(nat, before = gender)
 
 ```
@@ -177,7 +167,6 @@ df %>% relocate(nat, before = gender)
 </summary>
 
 ```{r}
-
 df %>% group_by(gender) %>% 
   summarise(median_age = median(dob_age))
 ```

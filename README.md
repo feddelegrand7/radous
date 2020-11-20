@@ -34,14 +34,10 @@ situations :
 
 ## Installation
 
-You can install the development version of `radous` from
-[GitHub](https://github.com/) with:
+You can `radous` from CRAN with:
 
 ``` r
-
-#install.packages("remotes") ---- If not installed
-
-remotes::install_github("feddelegrand7/radous")
+install.packages("radous")
 ```
 
 ## Usage
@@ -51,23 +47,22 @@ remotes::install_github("feddelegrand7/radous")
 Suppose we want to generate 10 random user data:
 
 ``` r
-
 library(radous)
 
 get_data(n = 10)
 # A tibble: 10 x 34
    gender name_title name_first name_last location_street~ location_street~
    <chr>  <chr>      <chr>      <chr>                <dbl> <chr>           
- 1 female Miss       Charina    Ten Veen              7347 Kleine Visserij~
- 2 female Mademoise~ Valeria    Meyer                 7346 Rue Paul-Duvivi~
- 3 female Madame     Céline     Simon                 7212 Avenue Goerges ~
- 4 female Miss       Fazilet    Kee                   9719 Admiraal Helfri~
- 5 male   Mr         Umut       Türkyilm~             5125 Doktorlar Cd    
- 6 female Ms         Nicoline   Petersen              9565 Kærsangervej    
- 7 female Miss       Minttu     Salonen               3801 Rotuaari        
- 8 male   Mr         Leo        Larson                 540 Lovers Ln       
- 9 male   Mr         Arthur     Macrae                 183 Park Road       
-10 female Miss       Rosl       Klages                 819 Kirchweg        
+ 1 male   Mr         Phoenix    King                  2697 West Quay       
+ 2 female Miss       Venla      Lehto                 1288 Rotuaari        
+ 3 female Miss       Ingeborg   Hatlevik               549 Revierstredet   
+ 4 male   Mr         Salazar    Duarte                3498 Rua Primeiro de~
+ 5 female Miss       Addison    Johnson               7674 Hardy Street    
+ 6 male   Mr         Bartholom~ Bräuer                5196 Erlenweg        
+ 7 female Miss       Elise      Renard                7354 Rue Louis-Garra~
+ 8 male   Mr         Stanley    Sims                  1481 Shady Ln Dr     
+ 9 female Miss       Beatrice   Gagné                 2575 Maple Ave       
+10 female Miss       Florence   Garza                 8604 New Street      
 # ... with 28 more variables: location_city <chr>, location_state <chr>,
 #   location_country <chr>, location_postcode <chr>,
 #   location_coordinates_latitude <dbl>, location_coordinates_longitude <dbl>,
@@ -84,7 +79,6 @@ If you want to generate always the same set of users, you can use the
 `seed` argument:
 
 ``` r
-
 get_data(n = 5, seed = "1990")
 # A tibble: 5 x 34
   gender name_title name_first name_last location_street~ location_street~
@@ -109,7 +103,6 @@ get_data(n = 5, seed = "1990")
 Let’s run the above code again to check if we get the same info:
 
 ``` r
-
 get_data(n = 5, seed = "1990")
 # A tibble: 5 x 34
   gender name_title name_first name_last location_street~ location_street~
@@ -134,7 +127,6 @@ get_data(n = 5, seed = "1990")
 If you need some user images, it’s easy to get:
 
 ``` r
-
 library(dplyr)
 
 random_image <- get_data(n = 1) %>% select(picture_large) %>% pull()
@@ -144,7 +136,7 @@ htmltools::img(src = random_image, height = "150px", width = "150px")
 
 <!--html_preserve-->
 
-<img src="https://randomuser.me/api/portraits/men/35.jpg" height="150px" width="150px"/><!--/html_preserve-->
+<img src="https://randomuser.me/api/portraits/men/82.jpg" height="150px" width="150px"/><!--/html_preserve-->
 
 > Note that All randomly generated photos come from the authorized
 > section of [UI Faces](https://uifaces.co/).
@@ -166,7 +158,6 @@ suited for teaching the tidyverse, here some examples:
 </summary>
 
 ``` r
-
 library(tidyverse)
 
 df <- get_data(n = 500, seed = "123")
@@ -204,7 +195,6 @@ df %>% select(contains("location"))
 </summary>
 
 ``` r
-
 df %>% filter(nat == "US")
 # A tibble: 25 x 34
    gender name_title name_first name_last location_street~ location_street~
@@ -244,7 +234,6 @@ df %>% filter(nat == "US")
 </summary>
 
 ``` r
-
 df %>% relocate(nat, before = gender)
 # A tibble: 500 x 34
    nat   gender name_title name_first name_last location_street~
@@ -284,7 +273,6 @@ df %>% relocate(nat, before = gender)
 </summary>
 
 ``` r
-
 df %>% group_by(gender) %>% 
   summarise(median_age = median(dob_age))
 `summarise()` ungrouping output (override with `.groups` argument)
