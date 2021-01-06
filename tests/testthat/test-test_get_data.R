@@ -1,5 +1,10 @@
 
-data <- httr::GET("https://randomuser.me/api/?seed=123&results=10&format=csv")
+
+data <- httr::RETRY(
+  "GET",
+  "https://randomuser.me/api/?seed=123&results=10&format=csv",
+  times = 3)
+
 
 text <- httr::content(data, as = "text")
 
