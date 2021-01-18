@@ -37,14 +37,14 @@ tryCatch(
     data <- httr::RETRY(
       "GET",
       link,
-      times = 3)
+      times = 5)
 
 
     text <- httr::content(data, as = "text")
 
     data <- readr::read_csv(text)
 
-    data <- janitor::clean_names(data)
+    names(data) <- gsub(".", "_", names(data), fixed = TRUE)
 
     return(data)
 
@@ -54,13 +54,29 @@ tryCatch(
   error = function(cond){
 
 
-    message(paste0("Error: ", cond))
+    if(!curl::has_internet()){
 
-    return(NA)
+      message(paste0("Please check your internet connexion: ", cond))
 
-  }
+      return(NA)
+
+    } else if(data$status_code != 200) {
+
+      message(paste0("Status code response not see successful: "), cond)
+
+      return(NA)
 
 
+    } else {
+
+      message(paste0("Undefined Error: "), cond)
+
+      return(NA)
+
+
+      }
+
+}
 )
 
 

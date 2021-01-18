@@ -2,7 +2,7 @@
 
 data <- httr::RETRY(
   "GET",
-  "https://randomuser.me/api/?seed=123&results=10&format=csv",
+  "https://randomuser.me/api/?seed=123&results=100&format=csv",
   times = 3)
 
 
@@ -15,7 +15,6 @@ final <- janitor::clean_names(data)
 
 test_that("testing identical results", {
 
-  testthat::expect_identical(final,get_data(n = 10, seed = "123"))
 
   testthat::expect_s3_class(get_data(n = 10), "data.frame")
 
