@@ -42,7 +42,7 @@ tryCatch(
 
     text <- httr::content(data, as = "text")
 
-    data <- readr::read_csv(text)
+    data <- readr::read_csv(I(text))
 
     names(data) <- gsub(".", "_", names(data), fixed = TRUE)
 

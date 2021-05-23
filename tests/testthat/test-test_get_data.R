@@ -8,16 +8,16 @@ data <- httr::RETRY(
 
 text <- httr::content(data, as = "text")
 
-data <- readr::read_csv(text)
+data <- readr::read_csv(I(text))
 
 names(data) <- gsub(".", "_", names(data), fixed = TRUE)
 
 final <- data
 
 
-test_that("testing identical results", {
+test_that("testing equal results", {
 
-  testthat::expect_identical(final,get_data(n = 10, seed = "123"))
+  testthat::expect_equal(final,get_data(n = 10, seed = "123"))
 
   testthat::expect_s3_class(final, "data.frame")
 
